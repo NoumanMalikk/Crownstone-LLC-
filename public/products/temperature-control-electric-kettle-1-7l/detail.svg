@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200" role="img" aria-label="Temperature-Control Electric Kettle, 1.7 Liter">
+  <rect width="1200" height="1200" fill="#FFFFFF"/>
+  <rect x="48" y="48" width="1104" height="1104" rx="32" fill="#F8FAFC" stroke="#DCE2EA"/>
+  <path d="M400 420 h320 v280 a80 80 0 0 1 -80 80 H480 a80 80 0 0 1 -80 -80 Z" fill="#C8CED6"/><path d="M720 480 h90 a40 40 0 0 1 0 120 h-90" fill="none" stroke="#C8CED6" stroke-width="28"/><ellipse cx="560" cy="400" rx="110" ry="28" fill="#CBD2DC"/>
+  <rect x="220" y="980" width="760" height="72" rx="16" fill="#171B21"/>
+  <text x="600" y="1024" text-anchor="middle" font-family="Manrope, Inter, sans-serif" font-size="28" font-weight="650" fill="#FFFFFF">Secondary view · Exact image required</text>
+  <text x="600" y="180" text-anchor="middle" font-family="Manrope, Inter, sans-serif" font-size="26" font-weight="600" fill="#647080">CRN-APP-003</text>
+</svg>

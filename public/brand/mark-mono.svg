@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" role="img" aria-label="Crownstone">
+  <rect width="64" height="64" rx="14" fill="#151A22"/>
+  <path d="M18 24h28v6H30v3c0 7 4 11.5 11.5 11.5 2 0 3.8-.3 5.4-.9l1.3 5.4c-2.2.9-4.7 1.4-7.4 1.4C27.2 50.4 20 43.2 20 31.5V24z" fill="#FFFFFF"/>
+  <path d="M16 16 L32 8 L48 16" stroke="#FFFFFF" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+</svg>

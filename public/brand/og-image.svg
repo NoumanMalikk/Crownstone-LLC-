@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" fill="none" role="img" aria-label="Crownstone">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1200" y2="630">
+      <stop stop-color="#0B0D10"/>
+      <stop offset="0.55" stop-color="#171B21"/>
+      <stop offset="1" stop-color="#222933"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#g)"/>
+  <circle cx="980" cy="120" r="220" fill="#246BFD" opacity="0.18"/>
+  <circle cx="200" cy="520" r="180" fill="#20C5E8" opacity="0.12"/>
+  <rect x="96" y="210" width="72" height="72" rx="16" fill="#F8FAFC"/>
+  <path d="M112 228h44v8H132v4c0 9.5 5.2 15.5 15 15.5 2.6 0 5-.4 7-1.2l1.8 7.2c-2.8 1.1-6 1.7-9.5 1.7-14.5 0-23.3-9-23.3-24.5V228z" fill="#0B0D10"/>
+  <path d="M108 218 L132 206 L156 218" stroke="#B79A6A" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <text x="192" y="260" font-family="Manrope, Arial, sans-serif" font-size="72" font-weight="750" fill="#F8FAFC">Crownstone</text>
+  <text x="96" y="340" font-family="Space Grotesk, Arial, sans-serif" font-size="36" fill="#CBD2DC">Technology with purpose.</text>
+  <text x="96" y="400" font-family="Inter, Arial, sans-serif" font-size="24" fill="#647080">Electronics, Computing &amp; Home Appliances</text>
+</svg>

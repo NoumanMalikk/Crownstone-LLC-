@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200" role="img" aria-label="Professional Countertop Blender, 72 oz">
+  <rect width="1200" height="1200" fill="#FFFFFF"/>
+  <rect x="48" y="48" width="1104" height="1104" rx="32" fill="#F8FAFC" stroke="#DCE2EA"/>
+  <path d="M420 720 L460 400 H740 L780 720 Z" fill="#C5CCD4"/><rect x="500" y="280" width="200" height="130" rx="20" fill="#CBD2DC"/><rect x="390" y="700" width="420" height="50" rx="12" fill="#38414D"/>
+  <rect x="220" y="980" width="760" height="72" rx="16" fill="#171B21"/>
+  <text x="600" y="1024" text-anchor="middle" font-family="Manrope, Inter, sans-serif" font-size="28" font-weight="650" fill="#FFFFFF">Exact product image required</text>
+  <text x="600" y="180" text-anchor="middle" font-family="Manrope, Inter, sans-serif" font-size="26" font-weight="600" fill="#647080">CRN-APP-002</text>
+</svg>
