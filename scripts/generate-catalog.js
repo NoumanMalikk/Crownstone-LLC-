@@ -132,7 +132,7 @@ const productObjects = catalog.map((item) => {
     originalSource: "Crownstone development placeholder silhouette",
     manufacturer: "Pending verification",
     supplier: "Pending verification",
-    licenseOrPermission: "Internal placeholder only — replace before production",
+    licenseOrPermission: "Internal placeholder only - replace before production",
     dateObtained: "2026-07-13",
     exactModelMatch: false,
     exactGenerationMatch: false,
@@ -142,7 +142,7 @@ const productObjects = catalog.map((item) => {
     exactAccessoryMatch: false,
     whiteBackground: true,
     replacementRequired: true,
-    altText: `${item.title} — exact authorized product image required`,
+    altText: `${item.title} - exact authorized product image required`,
   });
 
   const shortDescription = `${item.title} for modern work and home routines. Exact manufacturer, model and specifications require supplier confirmation before production launch.`;
@@ -186,11 +186,11 @@ const productObjects = catalog.map((item) => {
     certificationInformation: [],
     safetyInformation: ["Follow manufacturer safety guidance once the exact model is confirmed."],
     images: [
-      { src: "/products/${item.slug}/main.svg", alt: ${JSON.stringify(item.title + " — exact authorized product image required")}, type: "placeholder", width: 1200, height: 1200 },
+      { src: "/products/${item.slug}/main.svg", alt: ${JSON.stringify(item.title + " - exact authorized product image required")}, type: "placeholder", width: 1200, height: 1200 },
       { src: "/products/${item.slug}/detail.svg", alt: ${JSON.stringify(item.title + " secondary placeholder")}, type: "placeholder", width: 1200, height: 1200 },
     ],
-    imageAltText: ${JSON.stringify(item.title + " — exact authorized product image required")},
-    imageSource: "Development placeholder — replace with authorized manufacturer or supplier media",
+    imageAltText: ${JSON.stringify(item.title + " - exact authorized product image required")},
+    imageSource: "Development placeholder - replace with authorized manufacturer or supplier media",
     imageLicense: "Placeholder only. Not for production merchandising.",
     availableColors: [{ name: ${JSON.stringify(item.color)}, hex: "${item.hex}" }],
     availableCapacities: ${JSON.stringify(item.capacity ? [item.capacity] : [])},

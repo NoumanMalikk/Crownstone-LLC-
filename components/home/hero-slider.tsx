@@ -94,7 +94,7 @@ export function HeroSlider() {
 
   return (
     <section
-      className="relative isolate h-[min(90vh,980px)] min-h-[620px] overflow-hidden text-white md:min-h-[700px]"
+      className="relative isolate -mt-[4.25rem] h-[min(92vh,1000px)] min-h-[640px] overflow-hidden pt-[4.25rem] text-white md:min-h-[720px]"
       aria-roledescription="carousel"
       aria-label="Featured technology campaigns"
       onMouseEnter={() => setPaused(true)}

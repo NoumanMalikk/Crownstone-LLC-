@@ -34,7 +34,7 @@ export function HomeSections() {
             <div>
               <h2 className="heading-display text-3xl md:text-5xl">New tools for modern routines</h2>
               <p className="mt-3 max-w-2xl text-[var(--text-secondary)]">
-                Explore recently added computing, power and home-technology products — shown with clean studio photography.
+                Explore recently added computing, power and home-technology products - shown with clean studio photography.
               </p>
             </div>
             <Button asChild variant="outline" className="rounded-full">
@@ -404,10 +404,10 @@ function ApplianceComparePreview() {
             </thead>
             <tbody>
               {[
-                ["Capacity", (p: NonNullable<(typeof appliances)[number]>) => p.capacity ?? "—"],
+                ["Capacity", (p: NonNullable<(typeof appliances)[number]>) => p.capacity ?? "-"],
                 ["Power", (p: NonNullable<(typeof appliances)[number]>) => p.powerRating ?? "Pending verification"],
                 ["Dimensions", (p: NonNullable<(typeof appliances)[number]>) => p.dimensions.display],
-                ["Functions", (p: NonNullable<(typeof appliances)[number]>) => p.keyFeatures[0] ?? "—"],
+                ["Functions", (p: NonNullable<(typeof appliances)[number]>) => p.keyFeatures[0] ?? "-"],
                 ["Included accessories", (p: NonNullable<(typeof appliances)[number]>) => p.packageContents.join("; ")],
                 ["Price", (p: NonNullable<(typeof appliances)[number]>) => formatPrice(p.price)],
               ].map(([label, getter]) => (
@@ -572,7 +572,7 @@ function NewsletterPanel() {
                 }),
               });
               form.reset();
-              alert("Thanks — if email delivery is configured, you will hear from Crownstone.");
+              alert("Thanks - if email delivery is configured, you will hear from Crownstone.");
             }}
           >
             <Input name="email" type="email" required placeholder="Email address" className="bg-white" />

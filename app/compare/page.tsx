@@ -23,12 +23,12 @@ export default function ComparePage() {
     ["Dimensions", (p) => p.dimensions.display],
     ["Weight", (p) => p.weight.display],
     ["Warranty", (p) => p.warrantyInformation],
-    ["Color", (p) => p.availableColors.map((c) => c.name).join(", ") || "—"],
-    ["Connection", (p) => (p.connectionTypes ?? []).join(", ") || "—"],
-    ["Compatibility", (p) => p.compatibility.join("; ") || "—"],
-    ["Power", (p) => p.powerRating ?? "—"],
-    ["Ports", (p) => p.portConfiguration.join(", ") || "—"],
-    ["Capacity", (p) => p.capacity ?? "—"],
+    ["Color", (p) => p.availableColors.map((c) => c.name).join(", ") || "-"],
+    ["Connection", (p) => (p.connectionTypes ?? []).join(", ") || "-"],
+    ["Compatibility", (p) => p.compatibility.join("; ") || "-"],
+    ["Power", (p) => p.powerRating ?? "-"],
+    ["Ports", (p) => p.portConfiguration.join(", ") || "-"],
+    ["Capacity", (p) => p.capacity ?? "-"],
     ["Package contents", (p) => p.packageContents.join("; ")],
   ];
 

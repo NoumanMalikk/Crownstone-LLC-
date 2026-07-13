@@ -13,7 +13,7 @@ export default function JournalPage() {
     <div className="container-wide px-4 py-12">
       <h1 className="heading-display text-4xl">Crownstone Journal</h1>
       <p className="mt-3 max-w-2xl text-[var(--text-secondary)]">
-        Short practical guides — not a large content site.
+        Short practical guides - not a large content site.
       </p>
       <div className="mt-10 grid gap-4 md:grid-cols-3">
         {journalArticles.map((article) => (

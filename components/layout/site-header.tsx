@@ -41,16 +41,17 @@ export function SiteHeader() {
   useEffect(() => {
     const onScroll = () => {
       const y = window.scrollY;
-      setScrolled(y > 24);
+      setScrolled(y > 16);
       if (mobileOpen || openMenu) {
         setHidden(false);
-      } else if (y > lastY && y > 120) {
+      } else if (y > lastY && y > 140) {
         setHidden(true);
       } else {
         setHidden(false);
       }
       setLastY(y);
     };
+    onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, [lastY, mobileOpen, openMenu]);
@@ -67,7 +68,8 @@ export function SiteHeader() {
     };
   }, [mobileOpen]);
 
-  const transparent = isHome && !scrolled && !mobileOpen;
+  // Over-hero only when the dark homepage campaign sits behind the header.
+  const overHero = isHome && !scrolled && !mobileOpen;
   const messages = [
     storeConfig.announcement.primary,
     storeConfig.announcement.secondary,
@@ -75,33 +77,43 @@ export function SiteHeader() {
 
   return (
     <>
-      <div className="relative z-[60] bg-carbon text-center text-[12px] text-silver">
+      <div className="relative z-[60] bg-carbon text-center text-[12px] font-medium text-silver">
         <p className="container-wide px-4 py-2.5 tracking-[0.02em]">{messages[announceIndex]}</p>
       </div>
       <header
         className={cn(
           "sticky top-0 z-50 transition-all duration-300",
-          hidden && !mobileOpen ? "-translate-y-[110%]" : "translate-y-0",
-          transparent
-            ? "bg-transparent text-white"
-            : "border-b border-border/80 bg-soft-white/90 text-[var(--text)] shadow-[0_8px_30px_rgba(15,23,42,0.06)] backdrop-blur-xl"
+          hidden && !mobileOpen ? "-translate-y-[120%]" : "translate-y-0",
+          overHero
+            ? "border-b border-white/10 bg-carbon/55 text-white shadow-none backdrop-blur-xl"
+            : "border-b border-border bg-white text-[var(--text)] shadow-[0_10px_30px_rgba(15,23,42,0.06)]"
         )}
       >
-        <div className="container-wide flex h-[4.5rem] items-center gap-4 lg:h-16">
+        <div
+          className={cn(
+            "container-wide flex items-center gap-3 px-4 transition-[height] duration-300",
+            scrolled ? "h-14" : "h-[4.25rem]"
+          )}
+        >
           <button
             type="button"
-            className="grid h-11 w-11 place-items-center rounded-full border border-current/20 lg:hidden"
+            className={cn(
+              "grid h-11 w-11 place-items-center rounded-full border lg:hidden",
+              overHero ? "border-white/25 text-white" : "border-border text-[var(--text)]"
+            )}
             aria-label="Open menu"
             onClick={() => setMobileOpen(true)}
           >
             <Menu className="h-5 w-5" />
           </button>
+
           <Logo
-            variant={transparent ? "horizontal-light" : "horizontal"}
+            variant={overHero ? "horizontal-light" : "horizontal"}
             priority
             className="shrink-0"
           />
-          <nav className="ml-4 hidden items-center gap-1 xl:flex" aria-label="Primary">
+
+          <nav className="ml-2 hidden items-center gap-0.5 xl:flex" aria-label="Primary">
             {mainNavigation.map((item) => (
               <div
                 key={item.href}
@@ -111,11 +123,16 @@ export function SiteHeader() {
               >
                 <Link
                   href={item.href}
-                  className="inline-flex items-center gap-1 rounded-full px-3 py-2 text-sm font-semibold transition hover:text-electric"
+                  className={cn(
+                    "inline-flex items-center gap-1 rounded-full px-3 py-2 text-sm font-semibold transition",
+                    overHero
+                      ? "text-white/92 hover:bg-white/10 hover:text-white"
+                      : "text-[var(--text)] hover:bg-cool-gray hover:text-electric"
+                  )}
                   onFocus={() => setOpenMenu(item.label)}
                 >
                   {item.label}
-                  {item.children ? <ChevronDown className="h-3.5 w-3.5" /> : null}
+                  {item.children ? <ChevronDown className="h-3.5 w-3.5 opacity-70" /> : null}
                 </Link>
                 {item.children && openMenu === item.label ? (
                   <div className="absolute left-0 top-full z-50 w-[340px] rounded-2xl border border-border bg-white p-3 text-[var(--text)] shadow-2xl">
@@ -138,32 +155,30 @@ export function SiteHeader() {
               </div>
             ))}
           </nav>
-          <div className="ml-auto flex items-center gap-1 sm:gap-2">
-            <div className="hidden md:block">
+
+          <div className="ml-auto flex items-center gap-1 sm:gap-1.5">
+            <div className={cn("hidden md:block", overHero && "[&_input]:border-white/20 [&_input]:bg-white/10 [&_input]:text-white [&_input]:placeholder:text-white/55 [&_svg]:text-white/70")}>
               <PredictiveSearch compact />
             </div>
-            <Link
-              href="/search"
-              className="grid h-11 w-11 place-items-center rounded-full md:hidden"
-              aria-label="Search"
-            >
+            <HeaderIcon href="/search" label="Search" className="md:hidden" overHero={overHero}>
               <Search className="h-5 w-5" />
-            </Link>
-            <Link href="/compare" className="relative grid h-11 w-11 place-items-center rounded-full" aria-label="Compare">
+            </HeaderIcon>
+            <HeaderIcon href="/compare" label="Compare" overHero={overHero} count={compareCount}>
               <GitCompareArrows className="h-5 w-5" />
-              {compareCount > 0 ? <CountBadge count={compareCount} /> : null}
-            </Link>
-            <Link href="/wishlist" className="relative grid h-11 w-11 place-items-center rounded-full" aria-label="Wishlist">
+            </HeaderIcon>
+            <HeaderIcon href="/wishlist" label="Wishlist" overHero={overHero} count={wishCount}>
               <Heart className="h-5 w-5" />
-              {wishCount > 0 ? <CountBadge count={wishCount} /> : null}
-            </Link>
-            <Link href="/account" className="grid h-11 w-11 place-items-center rounded-full" aria-label="Account">
+            </HeaderIcon>
+            <HeaderIcon href="/account" label="Account" overHero={overHero}>
               <User className="h-5 w-5" />
-            </Link>
+            </HeaderIcon>
             <button
               type="button"
               onClick={openCart}
-              className="relative grid h-11 w-11 place-items-center rounded-full"
+              className={cn(
+                "relative grid h-11 w-11 place-items-center rounded-full transition",
+                overHero ? "text-white hover:bg-white/10" : "text-[var(--text)] hover:bg-cool-gray"
+              )}
               aria-label="Cart"
             >
               <ShoppingBag className="h-5 w-5" />
@@ -175,7 +190,7 @@ export function SiteHeader() {
 
       {mobileOpen ? (
         <div className="fixed inset-0 z-[70] bg-carbon/50 backdrop-blur-sm lg:hidden">
-          <div className="flex h-full w-full max-w-md flex-col bg-soft-white text-[var(--text)] shadow-2xl">
+          <div className="flex h-full w-full max-w-md flex-col bg-white text-[var(--text)] shadow-2xl">
             <div className="flex items-center justify-between border-b border-border px-4 py-4">
               <Logo variant="horizontal" />
               <button
@@ -232,6 +247,37 @@ export function SiteHeader() {
         </div>
       ) : null}
     </>
+  );
+}
+
+function HeaderIcon({
+  href,
+  label,
+  children,
+  overHero,
+  count,
+  className,
+}: {
+  href: string;
+  label: string;
+  children: React.ReactNode;
+  overHero: boolean;
+  count?: number;
+  className?: string;
+}) {
+  return (
+    <Link
+      href={href}
+      className={cn(
+        "relative grid h-11 w-11 place-items-center rounded-full transition",
+        overHero ? "text-white hover:bg-white/10" : "text-[var(--text)] hover:bg-cool-gray",
+        className
+      )}
+      aria-label={label}
+    >
+      {children}
+      {count && count > 0 ? <CountBadge count={count} /> : null}
+    </Link>
   );
 }
 

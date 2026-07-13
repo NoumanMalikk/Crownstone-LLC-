@@ -40,7 +40,7 @@ export function SignatureBento() {
             Technology, presented with purpose
           </h2>
           <p className="mt-4 text-[var(--text-secondary)]">
-            A focused edit of connectivity, storage, power and smart-home essentials — photographed for clarity.
+            A focused edit of connectivity, storage, power and smart-home essentials - photographed for clarity.
           </p>
         </div>
         <div className="mt-10 grid gap-4 md:grid-cols-3">

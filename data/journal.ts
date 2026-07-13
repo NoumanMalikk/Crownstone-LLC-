@@ -27,7 +27,7 @@ export const journalArticles = [
     slug: "practical-home-office-upgrade-checklist",
     title: "A Practical Home-Office Upgrade Checklist",
     excerpt:
-      "Improve focus with input, video, ergonomics, connectivity and cleaner power — without clutter.",
+      "Improve focus with input, video, ergonomics, connectivity and cleaner power - without clutter.",
     publishedAt: "2026-06-08",
     seoTitle: "Home-Office Upgrade Checklist | Crownstone Journal",
     seoDescription:
