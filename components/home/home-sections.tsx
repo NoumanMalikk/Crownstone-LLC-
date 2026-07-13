@@ -27,13 +27,15 @@ export function HomeSections() {
 
   return (
     <>
-      <section className="section-shell py-16 md:py-20">
+      <section className="bg-soft-white py-16 md:py-20">
         <div className="container-wide relative px-4">
-          <p className="eyebrow">Latest Technology</p>
+          <p className="eyebrow text-electric">Latest Technology</p>
           <div className="mt-3 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <div>
-              <h2 className="heading-display text-3xl md:text-5xl">New tools for modern routines</h2>
-              <p className="mt-3 max-w-2xl text-[var(--text-secondary)]">
+              <h2 className="heading-display text-3xl text-[var(--text)] md:text-5xl">
+                New tools for modern routines
+              </h2>
+              <p className="mt-3 max-w-2xl text-base text-[var(--text-secondary)]">
                 Explore recently added computing, power and home-technology products - shown with clean studio photography.
               </p>
             </div>
@@ -77,38 +79,49 @@ function WorkspaceEditorial() {
     .filter(Boolean);
 
   return (
-    <section className="bg-cool-gray/60 py-20">
-      <div className="container-wide grid items-center gap-10 px-4 lg:grid-cols-[1.2fr_0.8fr]">
-        <div className="relative min-h-[420px] overflow-hidden rounded-[2rem] bg-graphite">
-          <Image src="/campaigns/workspace.svg" alt="" fill className="object-cover opacity-80" />
-          <div className="absolute inset-0 grid grid-cols-2 gap-3 p-6">
+    <section className="bg-white py-20 md:py-24">
+      <div className="container-wide grid items-center gap-10 px-4 lg:grid-cols-[1.15fr_0.85fr] lg:gap-14">
+        <div className="rounded-[2rem] bg-gradient-to-br from-graphite to-deep-slate p-4 sm:p-5">
+          <div className="grid grid-cols-2 gap-3 sm:gap-4">
             {products.map((product) =>
               product ? (
-                <div key={product.id} className="relative overflow-hidden rounded-2xl bg-white/95 p-3">
+                <Link
+                  key={product.id}
+                  href={`/product/${product.slug}`}
+                  className="group overflow-hidden rounded-2xl bg-white p-4 transition hover:-translate-y-0.5"
+                >
                   <div className="relative aspect-square">
-                    <Image src={product.images[0].src} alt={product.imageAltText} fill className="object-contain" />
+                    <Image
+                      src={product.images[0].src}
+                      alt={product.imageAltText}
+                      fill
+                      className="object-contain p-2 transition duration-500 group-hover:scale-[1.04]"
+                      sizes="280px"
+                    />
                   </div>
-                </div>
+                </Link>
               ) : null
             )}
           </div>
         </div>
         <div>
-          <p className="eyebrow">The Crownstone Workspace</p>
-          <h2 className="heading-display mt-3 text-3xl md:text-5xl">Less clutter. More focus.</h2>
-          <p className="mt-4 text-[var(--text-secondary)]">
+          <p className="eyebrow text-electric">The organized workspace</p>
+          <h2 className="heading-display mt-3 text-3xl text-[var(--text)] md:text-5xl">
+            Less clutter. More focus.
+          </h2>
+          <p className="mt-4 max-w-md text-base leading-relaxed text-[var(--text-secondary)] md:text-lg">
             Create a refined setup with wireless input, clear video, elevated ergonomics and streamlined connectivity.
           </p>
           <Button asChild className="mt-8">
             <Link href="/collections/workspace-essentials">Shop Workspace Essentials</Link>
           </Button>
-          <div className="mt-8 grid gap-3 sm:grid-cols-3">
+          <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-2 border-t border-border pt-6">
             {["Wireless input", "Clear video calls", "Elevated ergonomics"].map((label) => (
-              <div key={label} className="rounded-2xl border border-border bg-white p-4 shadow-sm">
-                <p className="text-sm font-semibold">{label}</p>
-              </div>
+              <li key={label} className="text-sm font-semibold text-[var(--text)]">
+                {label}
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       </div>
     </section>
@@ -117,13 +130,16 @@ function WorkspaceEditorial() {
 
 function FeaturedComputing({ products }: { products: ReturnType<typeof getActiveProducts> }) {
   return (
-    <section className="py-20">
+    <section className="bg-soft-white py-20 md:py-24">
       <div className="container-wide px-4">
         <div className="max-w-3xl">
-          <p className="eyebrow">Computing</p>
-          <h2 className="heading-display mt-3 text-3xl md:text-5xl">
+          <p className="eyebrow text-electric">Computing</p>
+          <h2 className="heading-display mt-3 text-3xl text-[var(--text)] md:text-5xl">
             Performance begins with the right setup
           </h2>
+          <p className="mt-4 max-w-xl text-base text-[var(--text-secondary)]">
+            Keyboards, mice and webcams selected for everyday productivity.
+          </p>
         </div>
         <div className="mt-10 grid auto-rows-fr gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {products.map((product) => (
@@ -149,7 +165,8 @@ function ConnectivityStrip() {
   return (
     <section className="overflow-hidden bg-graphite py-20 text-white">
       <div className="container-wide px-4">
-        <h2 className="heading-display max-w-3xl text-3xl md:text-5xl">
+        <p className="eyebrow text-cyan">Connectivity</p>
+        <h2 className="heading-display mt-3 max-w-3xl text-3xl text-white md:text-5xl">
           Connect every part of your day.
         </h2>
         <div className="relative mt-10">
@@ -164,7 +181,7 @@ function ConnectivityStrip() {
                   <div className="relative mb-3 aspect-square overflow-hidden rounded-xl bg-white">
                     <Image src={product.images[0].src} alt={product.imageAltText} fill className="object-contain p-3" />
                   </div>
-                  <p className="line-clamp-2 text-sm font-medium text-silver">{product.title}</p>
+                  <p className="line-clamp-2 text-sm font-medium text-white">{product.title}</p>
                 </Link>
               ) : null
             )}
@@ -199,10 +216,10 @@ function SetupBuilder() {
   }, [connection, goal]);
 
   return (
-    <section className="py-20">
+    <section className="bg-white py-20">
       <div className="container-wide px-4">
-        <h2 className="heading-display text-3xl md:text-4xl">Build Your Setup</h2>
-        <p className="mt-3 max-w-2xl text-[var(--text-secondary)]">
+        <h2 className="heading-display text-3xl text-[var(--text)] md:text-4xl">Build Your Setup</h2>
+        <p className="mt-3 max-w-2xl text-base text-[var(--text-secondary)]">
           Choose a work style, connection preference and upgrade goal. No personal data is collected.
         </p>
         <div className="mt-8 grid gap-4 lg:grid-cols-3">
@@ -267,9 +284,11 @@ function SmartHomeEditorial() {
     .filter(Boolean);
 
   return (
-    <section className="bg-[#F7F4EF] py-20">
+    <section className="bg-cool-gray py-20">
       <div className="container-wide px-4">
-        <h2 className="heading-display text-3xl md:text-4xl">Small devices. Smarter routines.</h2>
+        <h2 className="heading-display text-3xl text-[var(--text)] md:text-4xl">
+          Small devices. Smarter routines.
+        </h2>
         <div className="mt-8 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4">
           {items.map((product) =>
             product ? (
@@ -436,8 +455,10 @@ function UnderFifty({ products }: { products: ReturnType<typeof getActiveProduct
     <section className="bg-[linear-gradient(180deg,#f8fafc,#eef3f8)] py-20">
       <div className="container-wide px-4">
         <div className="max-w-3xl">
-          <p className="eyebrow">Value edits</p>
-          <h2 className="heading-display mt-3 text-3xl md:text-5xl">Smart upgrades under $50</h2>
+          <p className="eyebrow text-electric">Value edits</p>
+          <h2 className="heading-display mt-3 text-3xl text-[var(--text)] md:text-5xl">
+            Smart upgrades under $50
+          </h2>
         </div>
         <div className="mt-10 grid auto-rows-fr gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {products.slice(0, 8).map((product) => (
@@ -453,10 +474,10 @@ function BusinessBand() {
   return (
     <section className="bg-stone py-20 text-white">
       <div className="container-wide px-4">
-        <h2 className="heading-display max-w-3xl text-3xl md:text-5xl">
+        <h2 className="heading-display max-w-3xl text-3xl text-white md:text-5xl">
           Buying for a team, office or organization?
         </h2>
-        <p className="mt-4 max-w-2xl text-silver">
+        <p className="mt-4 max-w-2xl text-base leading-relaxed text-silver">
           Request quantity pricing for keyboards, mice, headsets, connectivity, networking and workplace technology.
         </p>
         <div className="mt-8 flex flex-wrap gap-3">

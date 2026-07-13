@@ -32,14 +32,14 @@ const cards = [
 
 export function SignatureBento() {
   return (
-    <section className="section-shell py-20">
+    <section className="bg-white py-20">
       <div className="container-wide relative px-4">
         <div className="max-w-3xl">
-          <p className="eyebrow">Signature selection</p>
-          <h2 className="heading-display mt-3 text-3xl md:text-5xl">
+          <p className="eyebrow text-electric">Signature selection</p>
+          <h2 className="heading-display mt-3 text-3xl text-[var(--text)] md:text-5xl">
             Technology, presented with purpose
           </h2>
-          <p className="mt-4 text-[var(--text-secondary)]">
+          <p className="mt-4 text-base text-[var(--text-secondary)]">
             A focused edit of connectivity, storage, power and smart-home essentials - photographed for clarity.
           </p>
         </div>

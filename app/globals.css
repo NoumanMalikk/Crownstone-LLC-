@@ -15,7 +15,7 @@
   --soft-white: #f8fafc;
   --white: #ffffff;
   --text: #151a22;
-  --text-secondary: #647080;
+  --text-secondary: #4b5563;
   --border: #dce2ea;
   --success: #24815a;
   --warning: #a96c1b;
@@ -23,7 +23,7 @@
   --background: var(--soft-white);
   --foreground: var(--text);
   --radius: 1rem;
-  --header-h: 4.5rem;
+  --header-h: 4.75rem;
   --announce-h: 2.5rem;
 }
 

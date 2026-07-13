@@ -1,15 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" fill="none" role="img" aria-label="Crownstone workspace campaign environment">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" fill="none" role="img" aria-hidden="true">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <linearGradient id="bg-workspace" x1="0" y1="0" x2="1" y2="1">
       <stop stop-color="#0B0D10"/>
-      <stop offset="0.5" stop-color="#171B21"/>
+      <stop offset="0.55" stop-color="#171B21"/>
       <stop offset="1" stop-color="#222933"/>
     </linearGradient>
   </defs>
-  <rect width="1920" height="1080" fill="url(#bg)"/>
-  <rect x="0" y="720" width="1920" height="360" fill="#38414D" opacity="0.45"/>
-  <rect x="120" y="180" width="700" height="480" rx="24" fill="#222933" stroke="#246BFD" stroke-opacity="0.25"/>
-  <circle cx="1500" cy="280" r="180" fill="#246BFD" opacity="0.15"/>
-  <circle cx="1600" cy="700" r="240" fill="#20C5E8" opacity="0.08"/>
-  <text x="160" y="980" font-family="Manrope, Arial, sans-serif" font-size="28" fill="#CBD2DC">Crownstone campaign environment · exact catalogue products composited in UI</text>
+  <rect width="1920" height="1080" fill="url(#bg-workspace)"/>
+  <circle cx="1480" cy="240" r="260" fill="#246BFD" opacity="0.16"/>
+  <circle cx="420" cy="780" r="220" fill="#20C5E8" opacity="0.08"/>
+  <rect x="0" y="820" width="1920" height="260" fill="#0B0D10" opacity="0.35"/>
 </svg>

@@ -13,11 +13,13 @@ export const metadata = buildMetadata({
 
 export default function HomePage() {
   return (
-    <div className="overflow-x-hidden bg-[linear-gradient(180deg,#0B0D10_0%,#0B0D10_42%,#f7f9fc_42%,#ffffff_70%,#f4f7fb_100%)]">
+    <div className="overflow-x-hidden bg-soft-white">
       <HeroSlider />
       <CategoryRail />
-      <SignatureBento />
-      <HomeSections />
+      <div className="bg-soft-white">
+        <SignatureBento />
+        <HomeSections />
+      </div>
     </div>
   );
 }

@@ -94,7 +94,7 @@ export function HeroSlider() {
 
   return (
     <section
-      className="relative isolate -mt-[4.25rem] h-[min(92vh,1000px)] min-h-[640px] overflow-hidden pt-[4.25rem] text-white md:min-h-[720px]"
+      className="relative isolate h-[min(88vh,920px)] min-h-[600px] overflow-hidden text-white md:min-h-[680px]"
       aria-roledescription="carousel"
       aria-label="Featured technology campaigns"
       onMouseEnter={() => setPaused(true)}
@@ -131,13 +131,13 @@ export function HeroSlider() {
         </div>
       ))}
 
-      <div className="container-wide relative z-10 grid h-full items-end gap-10 px-4 pb-28 pt-28 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:pb-24">
+      <div className="container-wide relative z-10 grid h-full items-end gap-10 px-4 pb-24 pt-20 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:pb-20 lg:pt-16">
         <div key={slide.id} className="max-w-2xl animate-fade-up">
           <p className="eyebrow text-cyan">{slide.eyebrow}</p>
-          <h1 className="heading-display mt-4 text-[2.6rem] leading-[1.02] sm:text-5xl lg:text-[3.6rem]">
+          <h1 className="heading-display mt-4 text-[2.6rem] leading-[1.02] text-white sm:text-5xl lg:text-[3.6rem]">
             {slide.headline}
           </h1>
-          <p className="mt-5 max-w-xl text-base leading-relaxed text-silver/90 sm:text-lg">
+          <p className="mt-5 max-w-xl text-base leading-relaxed text-silver sm:text-lg">
             {slide.text}
           </p>
           <div className="mt-8 flex flex-wrap gap-3">

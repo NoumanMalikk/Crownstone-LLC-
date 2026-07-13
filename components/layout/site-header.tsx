@@ -84,15 +84,15 @@ export function SiteHeader() {
         className={cn(
           "sticky top-0 z-50 transition-all duration-300",
           hidden && !mobileOpen ? "-translate-y-[120%]" : "translate-y-0",
-          overHero
-            ? "border-b border-white/10 bg-carbon/55 text-white shadow-none backdrop-blur-xl"
+            overHero
+            ? "border-b border-white/15 bg-carbon/80 text-white shadow-none backdrop-blur-xl"
             : "border-b border-border bg-white text-[var(--text)] shadow-[0_10px_30px_rgba(15,23,42,0.06)]"
         )}
       >
         <div
           className={cn(
             "container-wide flex items-center gap-3 px-4 transition-[height] duration-300",
-            scrolled ? "h-14" : "h-[4.25rem]"
+            scrolled ? "h-16" : "h-[4.75rem]"
           )}
         >
           <button

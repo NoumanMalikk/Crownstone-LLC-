@@ -6,15 +6,16 @@ import { getProductBySlug } from "@/data/products";
 
 export function CategoryRail() {
   return (
-    <section className="relative z-10 -mt-16 pb-8 md:-mt-20">
+    <section className="relative z-20 bg-soft-white pb-16 pt-10 md:pb-20 md:pt-14">
       <div className="container-wide px-4">
-        <div className="mb-6 flex items-end justify-between gap-4">
-          <div>
-            <p className="eyebrow text-cyan">Shop by category</p>
-            <h2 className="heading-display mt-2 text-2xl text-white md:text-3xl">
-              Start with what you need
-            </h2>
-          </div>
+        <div className="mb-8 max-w-2xl">
+          <p className="eyebrow text-electric">Shop by category</p>
+          <h2 className="heading-display mt-2 text-3xl text-[var(--text)] md:text-4xl">
+            Start with what you need
+          </h2>
+          <p className="mt-3 text-base text-[var(--text-secondary)]">
+            Browse computing, connectivity, power, smart home, audio and appliances.
+          </p>
         </div>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
           {floatingCategoryRail.map((category) => {
@@ -23,22 +24,24 @@ export function CategoryRail() {
               <Link
                 key={category.slug}
                 href={category.href}
-                className="group flex h-full min-h-[270px] flex-col overflow-hidden rounded-[1.5rem] border border-white/70 bg-white p-4 shadow-[0_24px_60px_rgba(15,23,42,0.16)] transition duration-400 hover:-translate-y-1.5 hover:border-electric/40 hover:shadow-[0_28px_70px_rgba(36,107,253,0.16)]"
+                className="group flex h-full min-h-[280px] flex-col overflow-hidden rounded-[1.35rem] border border-border bg-white p-4 shadow-[0_12px_36px_rgba(15,23,42,0.06)] transition duration-300 hover:-translate-y-1 hover:border-electric/40 hover:shadow-[0_20px_48px_rgba(36,107,253,0.12)]"
               >
-                <div className="relative mb-4 aspect-square overflow-hidden rounded-[1.1rem] bg-white">
+                <div className="relative mb-4 aspect-square overflow-hidden rounded-2xl bg-white">
                   {product ? (
                     <Image
                       src={product.images[0].src}
                       alt={product.imageAltText}
                       fill
-                      className="object-contain p-5 transition duration-500 group-hover:scale-[1.06]"
+                      className="object-contain p-4 transition duration-500 group-hover:scale-[1.04]"
                       sizes="200px"
                     />
                   ) : null}
                 </div>
                 <div className="mt-auto flex items-end justify-between gap-2">
                   <div>
-                    <p className="heading-editorial text-[1.12rem] text-[var(--text)]">{category.label}</p>
+                    <p className="heading-editorial text-[1.1rem] text-[var(--text)]">
+                      {category.label}
+                    </p>
                     <p className="mt-1 text-sm leading-snug text-[var(--text-secondary)]">
                       {category.description}
                     </p>
