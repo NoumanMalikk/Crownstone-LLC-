@@ -72,7 +72,7 @@ export function ProductCard({
             fill
             sizes="(max-width:768px) 85vw, (max-width:1200px) 33vw, 280px"
             className={cn(
-              "object-contain p-5 transition duration-500 ease-out group-hover:scale-[1.03]",
+              "object-contain p-6 transition duration-500 ease-out group-hover:scale-[1.03]",
               secondary && "group-hover:opacity-0"
             )}
           />
@@ -82,7 +82,7 @@ export function ProductCard({
               alt=""
               fill
               sizes="(max-width:768px) 85vw, (max-width:1200px) 33vw, 280px"
-              className="object-contain p-5 opacity-0 transition duration-500 ease-out group-hover:scale-[1.03] group-hover:opacity-100"
+              className="object-contain p-6 opacity-0 transition duration-500 ease-out group-hover:scale-[1.03] group-hover:opacity-100"
               aria-hidden
             />
           ) : null}
@@ -90,11 +90,11 @@ export function ProductCard({
         </Link>
       </div>
 
-      <div className="flex min-h-[220px] flex-1 flex-col gap-2.5 p-4 pt-3">
+      <div className="flex min-h-[236px] flex-1 flex-col gap-2.5 p-4 pt-3">
         <p className="min-h-[1rem] text-[11px] font-semibold uppercase tracking-[0.14em] text-[var(--text-secondary)]">
           {product.category.replace(/-/g, " ")}
         </p>
-        <h3 className="min-h-[3.1rem]">
+        <h3 className="min-h-[3.25rem]">
           <Link
             href={`/product/${product.slug}`}
             className="heading-editorial line-clamp-2 text-[1.05rem] leading-snug text-[var(--text)] transition hover:text-electric"

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200" role="img" aria-label="USB Flash Drive, 128 GB, Metal">
-  <rect width="1200" height="1200" fill="#FFFFFF"/>
-  <rect x="48" y="48" width="1104" height="1104" rx="32" fill="#F8FAFC" stroke="#DCE2EA"/>
-  <rect x="520" y="360" width="160" height="420" rx="18" fill="#A8B0B0"/><rect x="555" y="300" width="90" height="70" rx="6" fill="#CBD2DC"/>
-  <rect x="220" y="980" width="760" height="72" rx="16" fill="#171B21"/>
-  <text x="600" y="1024" text-anchor="middle" font-family="Manrope, Inter, sans-serif" font-size="28" font-weight="650" fill="#FFFFFF">Secondary view · Exact image required</text>
-  <text x="600" y="180" text-anchor="middle" font-family="Manrope, Inter, sans-serif" font-size="26" font-weight="600" fill="#647080">CRN-STO-002</text>
-</svg>

@@ -23,9 +23,9 @@ export function CatalogPage({
         <Suspense fallback={<div className="mt-8 h-14 border-y border-border" />}>
           <ShopToolbar initialCount={products.length} />
         </Suspense>
-        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <div className="mt-8 grid auto-rows-fr gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {products.map((product) => (
-            <div key={product.id} className="h-full">
+            <div key={product.id} className="h-full min-h-0">
               <ProductCard product={product} />
             </div>
           ))}

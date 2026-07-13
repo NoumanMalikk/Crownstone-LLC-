@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200" role="img" aria-label="Compact USB-C Charger, 30W">
-  <rect width="1200" height="1200" fill="#FFFFFF"/>
-  <rect x="48" y="48" width="1104" height="1104" rx="32" fill="#F8FAFC" stroke="#DCE2EA"/>
-  <rect x="460" y="420" width="280" height="320" rx="36" fill="#F4F6F8"/><circle cx="600" cy="560" r="36" fill="#246BFD" opacity="0.8"/>
-  <rect x="220" y="980" width="760" height="72" rx="16" fill="#171B21"/>
-  <text x="600" y="1024" text-anchor="middle" font-family="Manrope, Inter, sans-serif" font-size="28" font-weight="650" fill="#FFFFFF">Secondary view · Exact image required</text>
-  <text x="600" y="180" text-anchor="middle" font-family="Manrope, Inter, sans-serif" font-size="26" font-weight="600" fill="#647080">CRN-PWR-001</text>
-</svg>
